@@ -1,0 +1,43 @@
+.sidebar {
+  width: 15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-right: 4rem;
+  justify-content: center;
+}
+.sidelogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(179, 179, 179);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  img {
+    width: 80%;
+  }
+}
+
+.sidemenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid rgba(223, 223, 223, 0.918);
+  border-radius: 0.5rem;
+  font-weight: 500;
+  overflow: hidden;
+  li {
+    padding: 1rem;
+    cursor: pointer;
+    .sidebaricon {
+      font-size: 16px;
+      margin-right: 0.5rem;
+    }
+  }
+
+  .act {
+    font-weight: 700;
+    background-color: rgb(241, 241, 241);
+  }
+}
