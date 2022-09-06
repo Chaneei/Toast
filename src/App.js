@@ -1,8 +1,6 @@
 import { useState } from "react";
 import "./app.scss";
 import Sidebar from "./components/sidebar/Sidebar";
-// import Beverage from "./components/beverage/Beverage";
-// import Coffee from "./components/coffee/Coffee";
 import Toast from "./components/toast/Toast";
 
 function App() {

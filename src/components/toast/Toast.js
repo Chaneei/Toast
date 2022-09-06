@@ -6,7 +6,7 @@ const Toast = ({ tab }) => {
   return (
     <>
       <div className="toast">
-        {tab == 0 && (
+        {tab === 0 && (
           <>
             <div className="toast-title">
               <h3>TOAST</h3>
@@ -17,7 +17,7 @@ const Toast = ({ tab }) => {
             </div>
           </>
         )}
-        {tab == 1 && (
+        {tab === 1 && (
           <>
             <div className="toast-title">
               <h3>BEVERAGE</h3>
@@ -28,7 +28,7 @@ const Toast = ({ tab }) => {
             </div>
           </>
         )}
-        {tab == 2 && (
+        {tab === 2 && (
           <>
             <div className="toast-title">
               <h3>COFFEE&TEA</h3>
