@@ -1,0 +1,20 @@
+$border-color: rgb(179, 179, 179);
+$isaac-color: #d3313a;
+$light-mode: rgb(32, 32, 32);
+$night-mode: rgb(226, 226, 226);
+
+@mixin set-section {
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid $border-color;
+  margin-bottom: 1.5rem;
+  color: $light-mode;
+}
+
+@mixin set-menu {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid $border-color;
+  color: $light-mode;
+}

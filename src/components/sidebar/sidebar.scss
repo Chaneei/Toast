@@ -1,5 +1,9 @@
+@import "../../styles/base.scss";
 .sidebar {
   width: 15rem;
+  height: 100%;
+  position: sticky;
+  top: 2.5rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -10,10 +14,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgb(179, 179, 179);
-  padding: 1.5rem;
+  border: 1px solid $border-color;
+  padding: 1rem;
   border-radius: 0.5rem;
-  cursor: pointer;
   img {
     width: 80%;
   }
@@ -25,19 +28,20 @@
   justify-content: center;
   border: 1px solid rgba(223, 223, 223, 0.918);
   border-radius: 0.5rem;
-  font-weight: 500;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: $light-mode;
   overflow: hidden;
   li {
-    padding: 1rem;
+    padding: 0.7rem;
     cursor: pointer;
     .sidebaricon {
-      font-size: 16px;
+      font-size: 1rem;
       margin-right: 0.5rem;
     }
   }
 
   .act {
-    font-weight: 700;
     background-color: rgb(241, 241, 241);
   }
 }

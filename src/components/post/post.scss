@@ -1,0 +1,34 @@
+@import "../../styles/base.scss";
+.post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .post-filter {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border: 1px solid $border-color;
+    border-radius: 0.5rem;
+    option {
+      color: $light-mode;
+    }
+  }
+  .post-wrap {
+    padding: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    .post-item {
+      width: 50%;
+      text-align: center;
+      img {
+        width: 70%;
+      }
+      p {
+        font-size: 1rem;
+        font-weight: 500;
+      }
+      span {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

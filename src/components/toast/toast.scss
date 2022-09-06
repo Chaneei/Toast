@@ -1,0 +1,20 @@
+@import "../../styles/base.scss";
+
+.toast {
+  width: 100%;
+
+  .toast-title {
+    @include set-section;
+    h3 {
+      color: $isaac-color;
+    }
+    span {
+      font-size: 0.9rem;
+      font-weight: 400;
+    }
+  }
+
+  .toast-menu {
+    @include set-menu;
+  }
+}

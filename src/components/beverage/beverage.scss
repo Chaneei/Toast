@@ -1,0 +1,19 @@
+@import "../../styles/base.scss";
+.beverage {
+  width: 100%;
+
+  .beverage-title {
+    @include set-section;
+    h3 {
+      color: $isaac-color;
+    }
+    span {
+      font-size: 0.9rem;
+      font-weight: 400;
+    }
+  }
+
+  .beverage-menu {
+    @include set-menu;
+  }
+}
