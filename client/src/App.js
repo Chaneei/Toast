@@ -3,13 +3,14 @@ import "./app.scss";
 import Sidebar from "./components/sidebar/Sidebar";
 import Detail from "./page/details/Detail";
 import Toast from "./page/toast/Toast";
+import Like from "./page/like/Like";
+
 import {
   BrowserRouter as Router,
   Navigate,
   Route,
   Routes,
 } from "react-router-dom";
-import Like from "./components/like/Like";
 
 function App() {
   const [tab, setTab] = useState(0);

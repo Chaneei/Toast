@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./post.scss";
 const Post = ({ tab }) => {
   return (
@@ -14,7 +15,9 @@ const Post = ({ tab }) => {
             <div className="post-wrap">
               <div className="post-item">
                 <img src="https://delouvree.github.io/images/toast0.png" />
+                {/* <Link to={`/detail/${toast._id}`}> */}
                 <p>딥치즈베이컨 토스트</p>
+                {/* </Link> */}
                 <span>Deep Cheese Bacon Toast</span>
               </div>
               <div className="post-item">
