@@ -1,18 +1,32 @@
 import { useState } from "react";
 import "./app.scss";
 import Sidebar from "./components/sidebar/Sidebar";
-import Toast from "./components/toast/Toast";
+import Detail from "./page/details/Detail";
+import Toast from "./page/toast/Toast";
+import {
+  BrowserRouter as Router,
+  Navigate,
+  Route,
+  Routes,
+} from "react-router-dom";
+import Like from "./components/like/Like";
 
 function App() {
   const [tab, setTab] = useState(0);
   return (
     <>
-      <div className="home">
-        <Sidebar tab={tab} setTab={setTab} />
-        <div className="main">
-          <Toast tab={tab} />
+      <Router>
+        <div className="home">
+          <Sidebar tab={tab} setTab={setTab} />
+          <div className="main">
+            <Routes>
+              <Route path="/" element={<Toast tab={tab} />} />
+              <Route path="/detail:id" element={<Detail />} />
+              <Route path="/like" element={<Like />} />
+            </Routes>
+          </div>
         </div>
-      </div>
+      </Router>
     </>
   );
 }
