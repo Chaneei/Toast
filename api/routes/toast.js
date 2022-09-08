@@ -12,4 +12,24 @@ router.post("/", async (req, res) => {
   }
 });
 
+//GET ALL POSTS
+router.get("/", async (req, res) => {
+  try {
+    let toasts;
+    toasts = await Toast.find();
+    res.status(200).json(toasts);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+//GET ID POSTS
+router.get("/:id", async (req, res) => {
+  try {
+    const toast = await Toast.findById(req.params.id);
+    res.status(200).json(toast);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 module.exports = router;

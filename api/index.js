@@ -12,7 +12,7 @@ mongoose
   .then(console.log("Connected to MongoDB"))
   .catch((err) => console.log(err));
 
-app.use("/isaac/toast", toastRoute);
+app.use("/api/toast", toastRoute);
 
 app.listen(5000, () => {
   console.log("BackEnd server is running!");
