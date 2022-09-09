@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./post.scss";
-const Post = ({ tab }) => {
+const Post = ({ tab, toast }) => {
+  const [menu, setMenu] = useState(2);
   return (
     <>
       <div className="post">
@@ -13,48 +14,23 @@ const Post = ({ tab }) => {
         {tab === 0 && (
           <>
             <div className="post-wrap">
-              <div className="post-item">
-                <img src="https://delouvree.github.io/images/toast0.png" />
-                {/* <Link to={`/detail/${toast._id}`}> */}
-                <p>딥치즈베이컨 토스트</p>
-                {/* </Link> */}
-                <span>Deep Cheese Bacon Toast</span>
-              </div>
-              <div className="post-item">
-                <img src="https://delouvree.github.io/images/toast1.png" />
-                <p>더블소세지 토스트</p>
-                <span>Double Saussage Toast</span>
-              </div>
-              <div className="post-item">
-                <img src="https://delouvree.github.io/images/toast2.png" />
-                <p>피자 토스트</p>
-                <span>Pizza Toast</span>
-              </div>
-              <div className="post-item">
-                <img src="https://delouvree.github.io/images/toast3.png" />
-                <p>딥치즈포테이토 토스트</p>
-                <span>Deep Cheese Potato Toast</span>
-              </div>
-              <div className="post-item">
-                <img src="https://delouvree.github.io/images/toast4.png" />
-                <p>트리플소세지 토스트</p>
-                <span>Tripple Saussage Toast</span>
-              </div>
-              <div className="post-item">
-                <img src="https://delouvree.github.io/images/toast5.png" />
-                <p>허니갈릭 햄치즈</p>
-                <span>Honey Garlic Ham Toast</span>
-              </div>
-              <div className="post-item">
-                <img src="https://delouvree.github.io/images/toast6.png" />
-                <p>베이컨 포테이토 피자</p>
-                <span>Bacon Potato Pizza Toast</span>
-              </div>
-              <div className="post-item">
-                <img src="https://delouvree.github.io/images/toast7.png" />
-                <p>베이컨 치즈 베이글</p>
-                <span>Bacon cheese Toast</span>
-              </div>
+              {toast.slice(0, menu).map((c) => (
+                <div className="post-item">
+                  <img src={c.img} />
+                  <Link className="link" to={`/detail/${toast._id}`}>
+                    <p>{c.title}</p>
+                  </Link>
+                  <span>{c.engtitle}</span>
+                </div>
+              ))}
+              <button
+                className={`slidebtn ${toast.length === menu && `nomorebtn`}`}
+                onClick={() =>
+                  toast.length === menu ? undefined : setMenu(menu + 2)
+                }
+              >
+                <i class="fa-solid fa-caret-down"></i>
+              </button>
             </div>
           </>
         )}

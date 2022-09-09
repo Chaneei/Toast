@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Post from "../../components/post/Post";
 import "./toast.scss";
+import axios from "axios";
 
 const Toast = ({ tab }) => {
+  const [toast, setToast] = useState({});
+
+  useEffect(() => {
+    const getToast = async () => {
+      try {
+        const res = await axios.get("/api/toast");
+        setToast(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getToast();
+  }, []);
   return (
     <>
       <div className="toast">
@@ -13,7 +27,7 @@ const Toast = ({ tab }) => {
               <span>주문 즉시 갓 구워낸 토스트에 달콤함 이삭소스</span>
             </div>
             <div className="toast-menu">
-              <Post tab={tab} />
+              <Post tab={tab} toast={toast} />
             </div>
           </>
         )}

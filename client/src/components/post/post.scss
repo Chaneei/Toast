@@ -1,4 +1,5 @@
 @import "../../styles/base.scss";
+
 .post {
   display: flex;
   flex-direction: column;
@@ -15,6 +16,8 @@
   .post-wrap {
     padding: 0.5rem;
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     .post-item {
       width: 50%;
@@ -29,6 +32,16 @@
       span {
         font-size: 0.8rem;
       }
+    }
+    .slidebtn {
+      border: none;
+      background-color: white;
+      margin-top: 2rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    .nomorebtn {
+      display: none;
     }
   }
 }

@@ -6,7 +6,10 @@ const Sidebar = ({ tab, setTab }) => {
   return (
     <div className="sidebar">
       <div className="sidelogo">
-        <img src="https://www.isaac-toast.co.kr/assets/images/main/logo.svg" />
+        <img
+          src="https://www.isaac-toast.co.kr/assets/images/main/logo.svg"
+          alt=""
+        />
       </div>
       <ul className="sidemenu">
         <Link className="link" to="/">
@@ -29,20 +32,20 @@ const Sidebar = ({ tab, setTab }) => {
       <ul className="sidemenu">
         <Link className="link" to="/like">
           <li className={tab === 3 && `act`} onClick={() => setTab(3)}>
-            <i class="sidebaricon fa-solid fa-heart"></i> 즐겨찾기
+            <i className="sidebaricon fa-solid fa-heart"></i> 즐겨찾기
           </li>
         </Link>
         <li>
-          <i class="sidebaricon fa-solid fa-envelope"></i> 제보 / 문의
+          <i className="sidebaricon fa-solid fa-envelope"></i> 제보 / 문의
         </li>
       </ul>
 
       <ul className="sidemenu">
         <li onClick={() => setMode(!mode)}>
           {mode ? (
-            <i class="sidebaricon fa-solid fa-moon"></i>
+            <i className="sidebaricon fa-solid fa-moon"></i>
           ) : (
-            <i class="sidebaricon fa-solid fa-sun"></i>
+            <i className="sidebaricon fa-solid fa-sun"></i>
           )}
           다크모드
         </li>
