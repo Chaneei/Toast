@@ -13,25 +13,37 @@ const Sidebar = ({ tab, setTab }) => {
       </div>
       <ul className="sidemenu">
         <Link className="link" to="/">
-          <li className={tab === 0 && `act`} onClick={() => setTab(0)}>
+          <li
+            className={tab === 0 ? `act` : undefined}
+            onClick={() => setTab(0)}
+          >
             <i className="sidebaricon fa-solid fa-bread-slice"></i>TOAST
           </li>
         </Link>
         <Link className="link" to="/">
-          <li className={tab === 1 && `act`} onClick={() => setTab(1)}>
-            <i class="sidebaricon fa-solid fa-glass-water"></i>BEVERAGE
+          <li
+            className={tab === 1 ? `act` : undefined}
+            onClick={() => setTab(1)}
+          >
+            <i className="sidebaricon fa-solid fa-glass-water"></i>TEA&COFFEE
           </li>
         </Link>
         <Link className="link" to="/">
-          <li className={tab === 2 && `act`} onClick={() => setTab(2)}>
-            <i className="sidebaricon fa-solid fa-mug-hot"></i>TEA&COFFEE
+          <li
+            className={tab === 2 ? `act` : undefined}
+            onClick={() => setTab(2)}
+          >
+            <i className="sidebaricon fa-solid fa-mug-hot"></i>BEVERAGE
           </li>
         </Link>
       </ul>
 
       <ul className="sidemenu">
         <Link className="link" to="/like">
-          <li className={tab === 3 && `act`} onClick={() => setTab(3)}>
+          <li
+            className={tab === 3 ? `act` : undefined}
+            onClick={() => setTab(3)}
+          >
             <i className="sidebaricon fa-solid fa-heart"></i> 즐겨찾기
           </li>
         </Link>

@@ -5,12 +5,7 @@ import Detail from "./page/details/Detail";
 import Toast from "./page/toast/Toast";
 import Like from "./page/like/Like";
 
-import {
-  BrowserRouter as Router,
-  Navigate,
-  Route,
-  Routes,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   const [tab, setTab] = useState(0);
@@ -22,7 +17,8 @@ function App() {
           <div className="main">
             <Routes>
               <Route path="/" element={<Toast tab={tab} />} />
-              <Route path="/detail:id" element={<Detail />} />
+              <Route path="/toast" element={<Toast tab={tab} />} />
+              <Route path="/toast/:id" element={<Detail />} />
               <Route path="/like" element={<Like />} />
             </Routes>
           </div>
