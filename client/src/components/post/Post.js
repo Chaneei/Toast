@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./post.scss";
 const Post = ({ tab, toast, coffee, beverage }) => {
-  const [menu, setMenu] = useState(2);
+  const [menu1, setMenu1] = useState(2);
+  const [menu2, setMenu2] = useState(2);
+  const [menu3, setMenu3] = useState(2);
   return (
     <>
       <div className="post">
@@ -14,7 +16,7 @@ const Post = ({ tab, toast, coffee, beverage }) => {
         {tab === 0 && (
           <>
             <div className="post-wrap">
-              {toast.slice(0, menu).map((c, index) => (
+              {toast.slice(0, menu1).map((c, index) => (
                 <div className="post-item">
                   <img src={c.img} alt="" />
                   <Link className="link" to={`/toast/${toast[index]._id}`}>
@@ -25,10 +27,10 @@ const Post = ({ tab, toast, coffee, beverage }) => {
               ))}
               <button
                 className={`slidebtn ${
-                  toast.length === menu ? `nomorebtn` : undefined
+                  toast.length === menu1 ? `nomorebtn` : undefined
                 }`}
                 onClick={() =>
-                  toast.length === menu ? undefined : setMenu(menu + 2)
+                  toast.length === menu1 ? undefined : setMenu1(menu1 + 2)
                 }
               >
                 <i className="fa-solid fa-caret-down"></i>
@@ -39,10 +41,10 @@ const Post = ({ tab, toast, coffee, beverage }) => {
         {tab === 1 && (
           <>
             <div className="post-wrap">
-              {coffee.slice(0, menu).map((c, index) => (
+              {coffee.slice(0, menu2).map((c, index) => (
                 <div className="post-item">
                   <img src={c.img} alt="" />
-                  <Link className="link" to={`/detail/${coffee[index]._id}`}>
+                  <Link className="link" to={`/coffee/${coffee[index]._id}`}>
                     <p>{c.title}</p>
                   </Link>
                   <span>{c.engtitle}</span>
@@ -50,10 +52,10 @@ const Post = ({ tab, toast, coffee, beverage }) => {
               ))}
               <button
                 className={`slidebtn ${
-                  coffee.length === menu ? `nomorebtn` : undefined
+                  coffee.length === menu2 ? `nomorebtn` : undefined
                 }`}
                 onClick={() =>
-                  coffee.length === menu ? undefined : setMenu(menu + 2)
+                  coffee.length === menu2 ? undefined : setMenu2(menu2 + 2)
                 }
               >
                 <i className="fa-solid fa-caret-down"></i>
@@ -64,10 +66,13 @@ const Post = ({ tab, toast, coffee, beverage }) => {
         {tab === 2 && (
           <>
             <div className="post-wrap">
-              {beverage.slice(0, menu).map((c, index) => (
+              {beverage.slice(0, menu3).map((c, index) => (
                 <div className="post-item">
                   <img src={c.img} alt="" />
-                  <Link className="link" to={`/detail/${beverage[index]._id}`}>
+                  <Link
+                    className="link"
+                    to={`/beverage/${beverage[index]._id}`}
+                  >
                     <p>{c.title}</p>
                   </Link>
                   <span>{c.engtitle}</span>
@@ -75,10 +80,10 @@ const Post = ({ tab, toast, coffee, beverage }) => {
               ))}
               <button
                 className={`slidebtn ${
-                  coffee.length === menu ? `nomorebtn` : undefined
+                  beverage.length === menu3 ? `nomorebtn` : undefined
                 }`}
                 onClick={() =>
-                  coffee.length === menu ? undefined : setMenu(menu + 2)
+                  beverage.length === menu3 ? undefined : setMenu3(menu3 + 2)
                 }
               >
                 <i className="fa-solid fa-caret-down"></i>
