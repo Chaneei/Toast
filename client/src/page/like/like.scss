@@ -1,0 +1,53 @@
+@import "../../styles/base.scss";
+
+.like {
+  width: 100%;
+
+  .like-title {
+    @include set-section;
+    h3 {
+      color: $isaac-color;
+    }
+  }
+
+  .like-menu {
+    @include set-menu;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .like-item {
+      width: 50%;
+      text-align: center;
+      position: relative;
+
+      &:hover {
+        opacity: 0.8;
+        button {
+          display: block;
+        }
+      }
+      img {
+        width: 70%;
+      }
+      p {
+        font-size: 1rem;
+        font-weight: 500;
+      }
+      span {
+        font-size: 0.8rem;
+        color: lightgray;
+      }
+      button {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+    }
+  }
+}

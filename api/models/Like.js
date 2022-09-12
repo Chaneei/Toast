@@ -2,25 +2,18 @@ const mongoose = require("mongoose");
 
 const LikeSchema = new mongoose.Schema(
   {
-    product: [
-      {
-        productId: {
-          type: String,
-        },
-        img: {
-          type: String,
-          default: "",
-        },
-        name: {
-          type: String,
-          required: true,
-        },
-        engname: {
-          type: String,
-          required: true,
-        },
-      },
-    ],
+    img: {
+      type: String,
+      default: "",
+    },
+    title: {
+      type: String,
+      required: true,
+    },
+    engtitle: {
+      type: String,
+      required: true,
+    },
   },
   { timestamps: true }
 );

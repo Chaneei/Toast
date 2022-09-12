@@ -7,12 +7,30 @@ const Detail = ({ tab }) => {
   const location = useLocation();
   const path = location.pathname.split("/")[2];
   const [menu, setMenu] = useState({});
+  // const [like, setLike] = useState([]);
   const navigate = useNavigate();
 
   const handleClick = () => {
     navigate(-1);
   };
-  const putClick = () => {};
+  const putClick = (e) => {
+    e.preventDefault();
+    const likeMenu = {
+      title: menu.title,
+      img: menu.img,
+      engtitle: menu.engtitle,
+    };
+    const postLikeMenu = async () => {
+      try {
+        await axios.post("/api/like", likeMenu);
+        window.confirm("찜완료!");
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    postLikeMenu();
+  };
+
   useEffect(() => {
     const getToastById = async () => {
       try {
@@ -51,17 +69,17 @@ const Detail = ({ tab }) => {
   return (
     <div className="detail">
       <h3>상세정보</h3>
-      <img src={menu.img} alt="" />
-      <h4 className="toast-title">{menu.title}</h4>
-      <span>{menu.engtitle}</span>
-      <p>{menu.desc}</p>
+      <form onSubmit={putClick}>
+        <img src={menu.img} alt="" />
+        <h4 className="toast-title">{menu.title}</h4>
+        <span>{menu.engtitle}</span>
+        <p>{menu.desc}</p>
 
-      <div className="btnwrap">
-        <button onClick={handleClick}>메뉴보기</button>
-        <button onClick={putClick}>
-          <i className="puticon fa-solid fa-heart"></i> 찜하기
-        </button>
-      </div>
+        <div className="btn">
+          <input type="submit" value="❤ 찜하기" />
+          <button onClick={handleClick}>메뉴보기</button>
+        </div>
+      </form>
     </div>
   );
 };
