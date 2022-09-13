@@ -10,6 +10,13 @@ $night-mode: rgb(226, 226, 226);
   border: 1px solid $border-color;
   margin-bottom: 1.5rem;
   color: $light-mode;
+  h3 {
+    color: $isaac-color;
+  }
+  span {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
 }
 
 @mixin set-menu {

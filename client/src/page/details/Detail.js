@@ -7,7 +7,6 @@ const Detail = ({ tab }) => {
   const location = useLocation();
   const path = location.pathname.split("/")[2];
   const [menu, setMenu] = useState({});
-  // const [like, setLike] = useState([]);
   const navigate = useNavigate();
 
   const handleClick = (e) => {

@@ -16,6 +16,7 @@ const More = () => {
   const handleDelete = async () => {
     try {
       await axios.delete(`/api/like/${path}`);
+      window.alert("지우기 완료");
       window.location.replace("/like");
     } catch (err) {
       console.log(err);

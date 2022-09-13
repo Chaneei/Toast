@@ -20,7 +20,8 @@ const Like = () => {
     <>
       <div className="like">
         <div className="like-title">
-          <h3>Like</h3>
+          <h3>FAVORITES</h3>
+          <span>내가 직접 고른 베스트 메뉴</span>
         </div>
         {like.length ? (
           <div className="like-menu">
@@ -35,7 +36,10 @@ const Like = () => {
             ))}
           </div>
         ) : (
-          <div className="like-none"></div>
+          <div className="like-none">
+            <i className="likeicon fa-solid fa-heart-crack"></i>
+            <span>Empty</span>
+          </div>
         )}
       </div>
     </>
