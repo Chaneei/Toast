@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import "./like.scss";
 const Like = () => {
   const [like, setLike] = useState([]);
@@ -15,32 +16,27 @@ const Like = () => {
     getLike();
   }, []);
 
-  // const handleDelete = () => {
-  //   const deleteLike = async () => {
-  //     try {
-  //     } catch (err) {}
-  //   };
-  //   deleteLike();
-  // };
-
   return (
     <>
       <div className="like">
         <div className="like-title">
           <h3>Like</h3>
         </div>
-        <div className="like-menu">
-          {like.map((c, index) => (
-            <div className="like-item">
-              <img src={c.img} alt="" />
-              <p>{c.title}</p>
-              <span>{c.engtitle}</span>
-              <button>
-                <i className="fa-solid fa-trash"></i>
-              </button>
-            </div>
-          ))}
-        </div>
+        {like.length ? (
+          <div className="like-menu">
+            {like.map((c, index) => (
+              <div className="like-item">
+                <img src={c.img} alt="" />
+                <Link className="link" to={`/like/${like[index]._id}`}>
+                  <p>{c.title}</p>
+                </Link>
+                <span>{c.engtitle}</span>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="like-none"></div>
+        )}
       </div>
     </>
   );

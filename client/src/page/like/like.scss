@@ -22,12 +22,12 @@
       text-align: center;
       position: relative;
 
-      &:hover {
-        opacity: 0.8;
-        button {
-          display: block;
-        }
-      }
+      // &:hover {
+      //   opacity: 0.8;
+      //   button {
+      //     display: block;
+      //   }
+      // }
       img {
         width: 70%;
       }
@@ -49,5 +49,11 @@
         cursor: pointer;
       }
     }
+  }
+  .like-none {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid $border-color;
+    color: $light-mode;
   }
 }

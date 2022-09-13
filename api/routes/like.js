@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const Like = require("../models/Like");
 
-//Post Like
+//CREATE LIKE
 router.post("/", async (req, res) => {
   const newLike = new Like(req.body);
   try {
@@ -12,7 +12,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-//Get all likes
+//Get ALL LIKES
 router.get("/", async (req, res) => {
   try {
     let likes;
@@ -23,11 +23,22 @@ router.get("/", async (req, res) => {
   }
 });
 
-//Delete
-router.delete("/", async (req, res) => {
+//GET ID LIKE
+router.get("/:id", async (req, res) => {
   try {
-    await Like.deleteOne({ title: `${req.body.title}` });
-    res.status(200).json("삭제완료");
+    const like = await Like.findById(req.params.id);
+    res.status(200).json(like);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+//DELETE LIKE
+router.delete("/:id", async (req, res) => {
+  try {
+    const like = await Like.findById(req.params.id);
+    await like.delete();
+    res.status(200).json("Like has been deleted...");
   } catch (err) {
     res.status(500).json(err);
   }

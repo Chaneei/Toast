@@ -9,47 +9,5 @@
   margin-bottom: 0;
   padding: 1rem;
 
-  form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    img {
-      width: 60%;
-    }
-    h3 {
-      color: $isaac-color;
-    }
-    span {
-      font-size: 0.9rem;
-      font-weight: 400;
-      color: lightgray;
-    }
-    p {
-      text-align: center;
-      width: 80%;
-      padding: 0.5rem;
-      word-break: keep-all;
-      font-size: 0.9rem;
-    }
-    input {
-      border: none;
-      margin-top: 0.5rem;
-      margin-right: 0.5rem;
-      padding: 0.5rem;
-      background-color: $light-mode;
-      border-radius: 0.5rem;
-      color: $night-mode;
-      cursor: pointer;
-    }
-    button {
-      border: none;
-      margin-top: 0.5rem;
-      padding: 0.5rem;
-      background-color: $light-mode;
-      border-radius: 0.5rem;
-      color: $night-mode;
-      cursor: pointer;
-    }
-  }
+  @include set-detail-more;
 }

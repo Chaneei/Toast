@@ -10,7 +10,8 @@ const Detail = ({ tab }) => {
   // const [like, setLike] = useState([]);
   const navigate = useNavigate();
 
-  const handleClick = () => {
+  const handleClick = (e) => {
+    e.preventDefault();
     navigate(-1);
   };
   const putClick = (e) => {
@@ -19,11 +20,12 @@ const Detail = ({ tab }) => {
       title: menu.title,
       img: menu.img,
       engtitle: menu.engtitle,
+      desc: menu.desc,
     };
     const postLikeMenu = async () => {
       try {
         await axios.post("/api/like", likeMenu);
-        window.confirm("찜완료!");
+        window.alert("찜완료!");
       } catch (err) {
         console.log(err);
       }
@@ -76,7 +78,7 @@ const Detail = ({ tab }) => {
         <p>{menu.desc}</p>
 
         <div className="btn">
-          <input type="submit" value="❤ 찜하기" />
+          <input type="submit" value="💓 찜하기" />
           <button onClick={handleClick}>메뉴보기</button>
         </div>
       </form>

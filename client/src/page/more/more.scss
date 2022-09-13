@@ -1,0 +1,50 @@
+@import "../../styles/base.scss";
+
+.more {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include set-section;
+  margin-bottom: 0;
+  padding: 1rem;
+  h3 {
+    color: $isaac-color;
+  }
+  .more-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 60%;
+    }
+
+    span {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: lightgray;
+    }
+    p {
+      text-align: center;
+      width: 80%;
+      padding: 0.5rem;
+      word-break: keep-all;
+      font-size: 0.9rem;
+    }
+
+    button {
+      border: none;
+      margin-top: 0.5rem;
+      margin-right: 0.5rem;
+      padding: 0.5rem;
+      background-color: $light-mode;
+      border-radius: 0.5rem;
+      color: $night-mode;
+      cursor: pointer;
+      &:nth-child(2) {
+        margin-right: 0;
+      }
+    }
+  }
+}

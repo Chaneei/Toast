@@ -18,3 +18,50 @@ $night-mode: rgb(226, 226, 226);
   border: 1px solid $border-color;
   color: $light-mode;
 }
+
+@mixin set-detail-more {
+  h3 {
+    color: $isaac-color;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 60%;
+    }
+
+    span {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: lightgray;
+    }
+    p {
+      text-align: center;
+      width: 80%;
+      padding: 0.5rem;
+      word-break: keep-all;
+      font-size: 0.9rem;
+    }
+    input {
+      border: none;
+      margin-top: 0.5rem;
+      margin-right: 0.5rem;
+      padding: 0.5rem;
+      background-color: $light-mode;
+      border-radius: 0.5rem;
+      color: $night-mode;
+      cursor: pointer;
+    }
+    button {
+      border: none;
+      margin-top: 0.5rem;
+      padding: 0.5rem;
+      background-color: $light-mode;
+      border-radius: 0.5rem;
+      color: $night-mode;
+      cursor: pointer;
+    }
+  }
+}

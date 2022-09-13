@@ -9,6 +9,7 @@ import Like from "./page/like/Like";
 import Modal from "react-modal";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import More from "./page/more/More";
 
 function App() {
   const [tab, setTab] = useState(0);
@@ -43,6 +44,7 @@ function App() {
               <Route path="/coffee" element={<Coffee tab={tab} />} />
               <Route path="/coffee/:id" element={<Detail tab={tab} />} />
               <Route path="/like" element={<Like />} />
+              <Route path="/like/:id" element={<More />} />
             </Routes>
           </div>
         </div>
