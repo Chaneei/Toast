@@ -1,5 +1,5 @@
 @import "../../styles/base.scss";
-
+@import "../../index.scss";
 .like {
   width: 100%;
   .like-title {
@@ -26,7 +26,7 @@
       }
       span {
         font-size: 0.8rem;
-        color: lightgray;
+        color: var(--gray);
       }
       button {
         display: none;
@@ -43,26 +43,23 @@
     height: 25vh;
     padding: 0.5rem;
     border-radius: 0.5rem;
-    border: 1px solid $border-color;
+    border: 1px solid var(--light-mode);
     color: $light-mode;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(
-        rgba(255, 255, 255, 0.5),
-        rgba(255, 255, 255, 0.5)
-      ),
+    background-image: linear-gradient(var(--like-bg), var(--like-bg)),
       url("https://images.unsplash.com/photo-1581067721837-e4809b29692d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80");
     background-repeat: none;
     background-position: center;
     background-size: cover;
     .likeicon {
       font-size: 2rem;
-      color: $light-mode;
+      color: var(--light-mode);
     }
     span {
-      color: $light-mode;
+      color: var(--light-mode);
       font-size: 0.9rem;
     }
   }

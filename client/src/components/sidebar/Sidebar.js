@@ -1,8 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./sidebar.scss";
 const Sidebar = ({ tab, setTab, modalIsOpen, setModalIsOpen }) => {
   const [mode, setMode] = useState("light");
+
+  useEffect(() => {
+    const bgMode = window.localStorage.getItem("bgMode");
+    if (bgMode === "dark") {
+      document.getElementsByTagName("html")[0].classList.add("ui-dark");
+    }
+  }, []);
+
+  const darkOnOff = () => {
+    setMode(!mode);
+    if (
+      document.getElementsByTagName("html")[0].classList.contains("ui-dark")
+    ) {
+      document.getElementsByTagName("html")[0].classList.remove("ui-dark");
+      window.localStorage.setItem("bgMode", "light");
+    } else {
+      document.getElementsByTagName("html")[0].classList.add("ui-dark");
+      window.localStorage.setItem("bgMode", "dark");
+    }
+  };
+
   return (
     <div className="sidebar">
       <div className="sidelogo">
@@ -47,13 +68,13 @@ const Sidebar = ({ tab, setTab, modalIsOpen, setModalIsOpen }) => {
             <i className="sidebaricon fa-solid fa-heart"></i> 즐겨찾기
           </li>
         </Link>
-        <li onClick={() => setModalIsOpen(true)}>
+        <li className="link" onClick={() => setModalIsOpen(true)}>
           <i className="sidebaricon fa-solid fa-envelope"></i> 제보 / 문의
         </li>
       </ul>
 
       <ul className="sidemenu">
-        <li onClick={() => setMode(!mode)}>
+        <li className="link" onClick={darkOnOff}>
           {mode ? (
             <i className="sidebaricon fa-solid fa-moon"></i>
           ) : (

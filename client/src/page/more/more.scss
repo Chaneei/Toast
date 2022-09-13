@@ -1,4 +1,5 @@
 @import "../../styles/base.scss";
+@import "../../index.scss";
 
 .more {
   display: flex;
@@ -9,7 +10,7 @@
   margin-bottom: 0;
   padding: 1rem;
   h3 {
-    color: $isaac-color;
+    color: var(--isaac-color);
   }
   .more-wrap {
     display: flex;
@@ -23,7 +24,7 @@
     span {
       font-size: 0.9rem;
       font-weight: 400;
-      color: lightgray;
+      color: var(--gray);
     }
     p {
       text-align: center;
@@ -38,9 +39,9 @@
       margin-top: 0.5rem;
       margin-right: 0.5rem;
       padding: 0.5rem;
-      background-color: $light-mode;
+      background-color: var(--light-mode);
       border-radius: 0.5rem;
-      color: $night-mode;
+      color: var(--night-mode);
       cursor: pointer;
       &:nth-child(2) {
         margin-right: 0;

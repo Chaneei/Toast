@@ -1,5 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap");
 
+:root {
+  --color-bg: #000000;
+  --border-color: #4e4e4e;
+  --isaac-color: #d3313a;
+  --light-mode: rgb(32, 32, 32);
+  --night-mode: rgb(226, 226, 226);
+  --gray: #4e4e4e;
+  --side-bg: rgba(223, 223, 223, 0.918);
+  --side-bg-act: rgb(70, 70, 70);
+  --like-bg: rgba(31, 31, 31, 0.5);
+}
+.ui-dark {
+  --color-bg: #ffffff;
+  --border-color: rgb(179, 179, 179);
+  --light-mode: rgb(226, 226, 226);
+  --isaac-color: #d3313a;
+  --night-mode: rgb(32, 32, 32);
+  --gray: #d3d3d3;
+  --side-bg: rgba(223, 223, 223, 0.918);
+  --side-bg-act: rgb(241, 241, 241);
+  --like-bg: rgba(255, 255, 255, 0.5);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,8 +35,9 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   -webkit-user-select: none;
-
+  background-color: var(--color-bg);
   font-family: "Noto Sans KR", sans-serif;
+  transition: all 0.5s ease;
 }
 
 ul,
@@ -26,7 +50,7 @@ a {
 }
 .link {
   text-decoration: none;
-  color: rgb(32, 32, 32);
+  color: var(--night-mode);
 }
 button {
   background-color: transparent;

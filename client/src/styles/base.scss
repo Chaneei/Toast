@@ -1,3 +1,4 @@
+@import "../index.scss";
 $border-color: rgb(179, 179, 179);
 $isaac-color: #d3313a;
 $light-mode: rgb(32, 32, 32);
@@ -7,11 +8,11 @@ $night-mode: rgb(226, 226, 226);
   text-align: center;
   padding: 0.5rem;
   border-radius: 0.5rem;
-  border: 1px solid $border-color;
+  border: 1px solid var(--border-color);
   margin-bottom: 1.5rem;
-  color: $light-mode;
+  color: var(--night-mode);
   h3 {
-    color: $isaac-color;
+    color: var(--isaac-color);
   }
   span {
     font-size: 0.9rem;
@@ -22,13 +23,13 @@ $night-mode: rgb(226, 226, 226);
 @mixin set-menu {
   padding: 0.5rem;
   border-radius: 0.5rem;
-  border: 1px solid $border-color;
-  color: $light-mode;
+  border: 1px solid var(--border-color);
+  color: var(--night-mode);
 }
 
 @mixin set-detail-more {
   h3 {
-    color: $isaac-color;
+    color: var(--isaac-color);
   }
   form {
     display: flex;
@@ -42,7 +43,7 @@ $night-mode: rgb(226, 226, 226);
     span {
       font-size: 0.9rem;
       font-weight: 400;
-      color: lightgray;
+      color: var(--gray);
     }
     p {
       text-align: center;
@@ -56,18 +57,18 @@ $night-mode: rgb(226, 226, 226);
       margin-top: 0.5rem;
       margin-right: 0.5rem;
       padding: 0.5rem;
-      background-color: $light-mode;
+      background-color: var(--light-mode);
       border-radius: 0.5rem;
-      color: $night-mode;
+      color: var(--night-mode);
       cursor: pointer;
     }
     button {
       border: none;
       margin-top: 0.5rem;
       padding: 0.5rem;
-      background-color: $light-mode;
+      background-color: var(--light-mode);
       border-radius: 0.5rem;
-      color: $night-mode;
+      color: var(--night-mode);
       cursor: pointer;
     }
   }

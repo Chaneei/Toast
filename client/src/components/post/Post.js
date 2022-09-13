@@ -86,7 +86,7 @@ const Post = ({ tab, toast, coffee, beverage }) => {
                   beverage.length === menu3 ? undefined : setMenu3(menu3 + 2)
                 }
               >
-                <i className="fa-solid fa-caret-down"></i>
+                <i className="slideicon fa-solid fa-caret-down"></i>
               </button>
             </div>
           </>
