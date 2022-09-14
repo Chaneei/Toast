@@ -10,4 +10,6 @@ MongoDB, Express, React, Nodejs  ToyProject
 
 <br/>
 지속적인 리펙토링 예정
+<br/>
+현재 Heroku Free버전으로 Dyno 업그레이드 예정
 </div>
