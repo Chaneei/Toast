@@ -24,7 +24,6 @@ MongoDB, Express, React, Nodejs  ToyProject
 <a href="https://berry-aries-40a.notion.site/Toy-Project-4-ed2dcc4428184115b33eeb6ce0cd5073" target="_blanket">Toast #4</a>
 <br/>
 <a href="https://berry-aries-40a.notion.site/Toy-Project-5-a3d697da35b84d67afda3a59a7a3ca23" target="_blanket">Toast #5</a>
-<br/>
-<a href="https://berry-aries-40a.notion.site/Toy-Project-6-20fed4fca9e146478752c6b1b84c9900" target="_blanket">Toast #6</a>
+
 </div>
 
