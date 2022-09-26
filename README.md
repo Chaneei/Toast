@@ -1,4 +1,4 @@
-# Toast Picker
+# 🍞Toast Picker
 
 <p align='center'>
 <img width="80%" src="https://user-images.githubusercontent.com/96166013/190034457-8ef3b3e6-ce44-48a8-bc1b-4cd962abaaf1.gif"/>
@@ -43,7 +43,7 @@ mongoDB에 저장된 데이터를 해당 탭에 따라 불러오고 즐겨먹는
 
 
 ## 📁 폴더 구조
-- client : FrontEnd로 화면 구성을 위해 pages, 공통 components, 상태관리를 위한 context 로 구성되어있습니다.
+- client : FrontEnd로 화면 구성을 위해 pages, 공통 components로 구성되어있습니다.
 - api : BackEnd로 index.js 와 model, route로 구성되어있습니다.
 
 ## 💎 How To Use?
