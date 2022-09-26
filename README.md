@@ -24,7 +24,7 @@
 
 ## 🔥 Introducing Project
 #### 🍞 이삭메뉴 골라담아보기!
-🔓 DB관리는 mongoDB로, Backend는 node.js와 express.js로! Frontend는 React로! 
+🔓 DB관리는 mongoDB로, Backend는 node.js로! Frontend는 React로! 
 
 #### 💖 최애 메뉴를 담아보자
 평소 즐겨먹는 이삭토스트의 메뉴들을 나만의 관심목록에 담는 토이프로젝트를 진행해보았습니다.
