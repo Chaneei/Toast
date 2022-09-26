@@ -19,6 +19,7 @@
     <img src="https://img.shields.io/badge/node.js-green?logo=Node.js"/>
     <img src="https://img.shields.io/badge/mongoDB-green?logo=MongoDB"/>
     <img src="https://img.shields.io/badge/express.js-black?logo=express"/>
+    <img src="https://img.shields.io/badge/sass-pink?logo=sass"/>
 </p>
 
 ## 🔥 Introducing Project
